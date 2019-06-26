@@ -16,16 +16,25 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+# Inherit some common Omni stuff.
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
+
+TARGET_BOOTANIMATION_SIZE := 1080p
+AB_OTA_UPDATER := true
+
+DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/CarrierConfig
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from Z01R device
 $(call inherit-product, device/asus/Z01R/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-PRODUCT_NAME := lineage_Z01R
+PRODUCT_NAME := omni_Z01R
 PRODUCT_DEVICE := Z01R
 PRODUCT_MANUFACTURER := unknown
 PRODUCT_BRAND := asus
