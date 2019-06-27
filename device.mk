@@ -64,7 +64,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-	Snap
+	SnapDragonCamera2
 
 # Common init scripts
 PRODUCT_PACKAGES += \
