@@ -68,22 +68,22 @@ PRODUCT_PACKAGES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
-    init.qcom.rc \
+  init.qcom.rc \
 	init.recovery.qcom.rc
 
 # Display
 PRODUCT_PACKAGES += \
-    libvulkan
+  libvulkan
 
 # Doze
-PRODUCT_PACKAGES += \
-    AsusParts \
+#PRODUCT_PACKAGES += \
+  AsusParts \
 	AsusPocketMode
 
 # FM
 PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
+  FM2 \
+  libqcomfm_jni \
 	qcom.fmradio
 
 # HotwordEnrollement app permissions
@@ -92,9 +92,9 @@ PRODUCT_COPY_FILES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0_system \
-    android.hidl.manager@1.0 \
+  android.hidl.base@1.0 \
+  android.hidl.base@1.0_system \
+  android.hidl.manager@1.0 \
 	android.hidl.manager@1.0_system
 
 # Lights
@@ -103,24 +103,23 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_profiles_vendor.xml:system/etc/media_profiles_vendor.xml
+  $(LOCAL_PATH)/configs/media_profiles_vendor.xml:system/etc/media_profiles_vendor.xml
 
 # Net
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.0 \
-    libandroid_net \
-    netutils-wrapper-1.0
+  android.system.net.netd@1.0 \
+  libandroid_net \
+  netutils-wrapper-1.0
 
 # NFC
 PRODUCT_PACKAGES += \
-    NfcNci \
-    Tag \
+  NfcNci \
+  Tag \
 	com.android.nfc_extras
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-	$(LOCAL_PATH)/overlay-lineage
+  $(LOCAL_PATH)/overlay
 
 # Power
 PRODUCT_PACKAGES += \
@@ -132,39 +131,39 @@ PRODUCT_PACKAGES += \
 # RIL
 # Interface library needed by odm blobs:
 PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.0 \
-    android.hardware.secure_element@1.0 \
-    android.hardware.radio.deprecated@1.0 \
-    android.hardware.radio@1.1 \
+  android.hardware.radio.config@1.0 \
+  android.hardware.secure_element@1.0 \
+  android.hardware.radio.deprecated@1.0 \
+  android.hardware.radio@1.1 \
 	android.hardware.radio@1.2
 
 # TextClassifier
 PRODUCT_PACKAGES += \
-    textclassifier.bundle1
+  textclassifier.bundle1
 
 # Telephony
 PRODUCT_PACKAGES += \
-    telephony-ext
+  telephony-ext
 
 PRODUCT_BOOT_JARS += \
 	telephony-ext
 
 # Trust HAL
-PRODUCT_PACKAGES += \
-    lineage.trust@1.0-service
+#PRODUCT_PACKAGES += \
+  lineage.trust@1.0-service
 
 # Update engine
 PRODUCT_PACKAGES += \
-    brillo_update_payload \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
+  brillo_update_payload \
+  update_engine \
+  update_engine_sideload \
+  update_verifier
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.sdm845 \
-    libcutils \
-    libgptutils \
-    libz \
+  bootctrl.sdm845 \
+  libcutils \
+  libgptutils \
+  libz \
 
 PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
+  update_engine_client
