@@ -68,6 +68,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    BluetoothResCommon
+
 # Camera
 PRODUCT_PACKAGES += \
 	SnapDragonCamera2
@@ -96,16 +100,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/goodixfp.kl:system/usr/keylayout/goodixfp.kl \
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayout/gf_input.kl:system/usr/keylayout/gf_input.kl
+
 # HIDL
 PRODUCT_PACKAGES += \
-  android.hidl.base@1.0 \
-  android.hidl.base@1.0_system \
-  android.hidl.manager@1.0 \
-	android.hidl.manager@1.0_system
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0_system \
+    android.hidl.manager@1.0 \
+    android.hidl.manager@1.0_system
 
 # Lights
 PRODUCT_PACKAGES += \
-	android.hardware.light@2.0-service.asus_Z01R
+    android.hardware.light@2.0-service.asus_Z01R
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -119,17 +128,18 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-  NfcNci \
-  Tag \
-	com.android.nfc_extras
+    NfcNci \
+    Tag \
+    com.android.nfc_extras
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-  $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay
+#    $(LOCAL_PATH)/overlay-lineage
 
 # Power
 PRODUCT_PACKAGES += \
-	power.qcom:64
+    power.qcom:64
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
@@ -137,11 +147,11 @@ PRODUCT_PACKAGES += \
 # RIL
 # Interface library needed by odm blobs:
 PRODUCT_PACKAGES += \
-  android.hardware.radio.config@1.0 \
-  android.hardware.secure_element@1.0 \
-  android.hardware.radio.deprecated@1.0 \
-  android.hardware.radio@1.1 \
-	android.hardware.radio@1.2
+    android.hardware.radio.config@1.0 \
+    android.hardware.secure_element@1.0 \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.radio@1.1 \
+    android.hardware.radio@1.2
 
 # TextClassifier
 PRODUCT_PACKAGES += \
@@ -152,7 +162,7 @@ PRODUCT_PACKAGES += \
   telephony-ext
 
 PRODUCT_BOOT_JARS += \
-	telephony-ext
+    telephony-ext
 
 # Trust HAL
 #PRODUCT_PACKAGES += \
@@ -172,4 +182,11 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
   libz \
 
 PRODUCT_PACKAGES_DEBUG += \
-  update_engine_client
+    update_engine_client
+
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libnl
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
