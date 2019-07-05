@@ -3,3 +3,6 @@ allow init vendor_file:file mounton;
 
 # Allow init to mount vendor configs
 allow init vendor_configs_file:file mounton;
+
+allow init hal_lineage_trust_hwservice:hwservice_manager add;
+allow init hidl_base_hwservice:hwservice_manager add;
