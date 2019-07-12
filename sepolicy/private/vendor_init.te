@@ -1,2 +1,4 @@
 # Allow vendor_init to set vendor_camera_prop
 set_prop(vendor_init, vendor_camera_prop)
+allow vendor_init system_data_file:dir { add_name remove_name setattr write };
+allow vendor_init system_data_file:file { create getattr open setattr write };
