@@ -1,0 +1,1 @@
+allow fts_gesture sysfs:filesystem associate;
