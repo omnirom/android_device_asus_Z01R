@@ -1,2 +1,2 @@
-allow system_server dalvikcache_data_file:file execute;
+# allow system_server dalvikcache_data_file:file execute;
 allow system_server vendor_camera_prop:file { getattr open read };
