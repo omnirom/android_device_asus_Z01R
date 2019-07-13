@@ -74,7 +74,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-	SnapDragonCamera2
+    SnapdragonCamera2
 
 # Common init scripts
 PRODUCT_PACKAGES += \
