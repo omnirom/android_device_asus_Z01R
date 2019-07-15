@@ -321,3 +321,9 @@ lib/libwfduibcsinkinterface.so
 lib/libwfduibcsrc.so
 lib/libwfduibcsrcinterface.so
 -priv-app/WfdService/WfdService.apk
+
+# Display api
+lib/libsdm-disp-apis.so
+lib/libsd_sdk_display.so
+lib64/libsdm-disp-apis.so
+lib64/libsd_sdk_display.so
