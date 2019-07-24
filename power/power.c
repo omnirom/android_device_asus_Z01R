@@ -50,7 +50,7 @@
 #include "power-common.h"
 
 #define LOG_TAG "Omni PowerHAL"
-#define DOUBLE_TAP_FILE "/proc/touchpanel/double_tap_enable"
+#define DOUBLE_TAP_FILE "/sys/bus/i2c/devices/3-0038/fts_dclick_mode"
 
 static int saved_dcvs_cpu0_slack_max = -1;
 static int saved_dcvs_cpu0_slack_min = -1;
