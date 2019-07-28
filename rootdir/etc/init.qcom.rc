@@ -22,6 +22,3 @@ on property:persist.dclick.on=1
 
 on charger
     write /sys/class/backlight/panel0-backlight/brightness 150
-
-on property:sys.boot_completed=1
-    umount /vendor/xrom
