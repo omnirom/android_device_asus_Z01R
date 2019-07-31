@@ -9,3 +9,6 @@ allow init hidl_base_hwservice:hwservice_manager add;
 # allow init system_file:file execute_no_trans;
 allow init vendor_overlay_file:file mounton;
 allow init hwservicemanager:binder call;
+
+# Allow init to chown/chmod on pseudo files in /sys
+allow init fts_sysfs:file { open read setattr };
