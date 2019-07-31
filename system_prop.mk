@@ -87,3 +87,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Expose AUX
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.asus.camera
+
+# Gesture
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dclick.on=1
+		
