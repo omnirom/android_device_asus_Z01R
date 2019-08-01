@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8f11fb7c_6f2a3952",
+        "filename": "system_prop.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1000026
+      },
+      "writtenOn": "2019-08-01T13:22:03Z",
+      "side": 1,
+      "message": "ouch! whitespace massacre",
+      "revId": "cf8cdccfaee6419b5e77f60cdfe0524faf9de88f",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
