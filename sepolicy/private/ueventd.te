@@ -1,1 +1,0 @@
-allow ueventd fts_gesture:file relabelto;
