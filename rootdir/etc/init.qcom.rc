@@ -14,6 +14,8 @@ on boot
     chown system system /sys/bus/i2c/devices/3-0038/fts_dclick_mode
     chmod 0660 /sys/bus/i2c/devices/3-0038/fts_dclick_mode
 
+    setprop vendor.camera.aux.packagelist org.omnirom.snap,com.asus.camera
+
 # Gesture properties
 on property:persist.dclick.on=0
     write /sys/bus/i2c/devices/3-0038/fts_dclick_mode 0
