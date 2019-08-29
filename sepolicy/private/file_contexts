@@ -17,3 +17,17 @@
 
 # Gesture
 /sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_dclick_mode        u:object_r:fts_sysfs:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_mode       u:object_r:fts_sysfs:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_buf        u:object_r:fts_sysfs:s0
+
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_c_mode        u:object_r:fts_sysfs:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_e_mode        u:object_r:fts_sysfs:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_l_mode        u:object_r:fts_sysfs:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_m_mode        u:object_r:fts_sysfs:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_o_mode        u:object_r:fts_sysfs:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_s_mode        u:object_r:fts_sysfs:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_v_mode        u:object_r:fts_sysfs:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_w_mode        u:object_r:fts_sysfs:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_z_mode        u:object_r:fts_sysfs:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_up_mode        u:object_r:fts_sysfs:s0
+/sys/devices/platform/soc/894000\.i2c/i2c-3/3-0038/fts_gesture_down_mode        u:object_r:fts_sysfs:s0
