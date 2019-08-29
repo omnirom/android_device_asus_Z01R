@@ -16,6 +16,45 @@ on boot
     chown system system /sys/bus/i2c/devices/3-0038/fts_dclick_mode
     chmod 0660 /sys/bus/i2c/devices/3-0038/fts_dclick_mode
 
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_mode
+     chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_buf
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_buf
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_c_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_c_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_e_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_e_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_l_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_l_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_m_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_m_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_o_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_o_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_s_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_s_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_v_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_v_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_w_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_w_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_z_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_z_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_up_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_up_mode
+
+    chown system system /sys/bus/i2c/devices/3-0038/fts_gesture_down_mode
+    chmod 0660 /sys/bus/i2c/devices/3-0038/fts_gesture_down_mode
+
     setprop vendor.camera.aux.packagelist org.omnirom.snap,com.asus.camera
 
 # Gesture properties
