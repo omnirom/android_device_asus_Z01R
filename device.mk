@@ -189,4 +189,5 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # DeviceParts
 PRODUCT_PACKAGES += \
-    OmniDisplayManager
+    OmniDisplayManager \
+    DeviceParts
