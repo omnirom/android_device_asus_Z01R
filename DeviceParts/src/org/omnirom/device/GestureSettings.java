@@ -56,7 +56,7 @@ public class GestureSettings extends PreferenceFragment implements
     public static final String KEY_PROXI_SWITCH = "proxi";
     public static final String KEY_OFF_SCREEN_GESTURE_FEEDBACK_SWITCH = "off_screen_gesture_feedback";
 
-    private static final String GESTURE_BUF_PATH = "/sys/bus/i2c/devices/3-0038/fts_gesture_buf";
+    protected static final String GESTURE_BUF_PATH = "/sys/bus/i2c/devices/3-0038/fts_gesture_buf";
     private static final String GESTURE_MODE_PATH = "/sys/bus/i2c/devices/3-0038/fts_gesture_mode";
 
     private static String getGestureValue(String value) {
@@ -273,7 +273,7 @@ public class GestureSettings extends PreferenceFragment implements
         return Utils.fileWritable(GESTURE_BUF_PATH);
     }
 
-    protected static void setGestureEnabled(String key, boolean enabled) {
+    protected void setGestureEnabled(String key, boolean enabled) {
       Log.e("GestureSettings", "setGestureEnabled called with key="+key+", enabled="+enabled);
       String bufLine = Utils.readLine(GESTURE_BUF_PATH);
       String hexBuf = getGestureValue(bufLine);
@@ -292,6 +292,9 @@ public class GestureSettings extends PreferenceFragment implements
       String gestureType = String.format("%7s", Integer.toBinaryString(gestureMode)).replace(' ', '0');
       Log.e("GestureSettings", "gestureType="+gestureType);
       Utils.writeLine(GESTURE_BUF_PATH, gestureType);
+
+      String gestureTypeMapping = Settings.System.getString(getContext().getContentResolver(), Settings.System.OMNI_BUTTON_EXTRA_KEY_MAPPING);
+      Settings.System.putString(getContext().getContentResolver(), Settings.System.OMNI_BUTTON_EXTRA_KEY_MAPPING, gestureType);
     }
 
     @Override

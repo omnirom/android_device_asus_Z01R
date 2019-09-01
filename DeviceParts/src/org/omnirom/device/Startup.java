@@ -29,9 +29,17 @@ import android.util.Log;
 public class Startup extends BroadcastReceiver {
     private static final String TAG = "Startup";
 
-    private static void restore(String key, boolean enabled) {
-        Log.e(TAG, "restore called with key="+key+", enabled="+enabled);
-        GestureSettings.setGestureEnabled(key, enabled);
+//    private static void restore(String key, boolean enabled) {
+//        Log.e(TAG, "restore called with key="+key+", enabled="+enabled);
+//        GestureSettings.setGestureEnabled(key, enabled);
+//    }
+
+    private static void restore(String file, String value) {
+      Log.e(TAG, "restore called with key="+file+", value="+value);
+      if (file == null) {
+            return;
+        }
+        Utils.writeLine(file, value);
     }
 
     private void maybeImportOldSettings(Context context) {
@@ -43,6 +51,7 @@ public class Startup extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, final Intent bootintent) {
+        Log.e(TAG, "onReceive called");
         maybeImportOldSettings(context);
         restoreAfterUserSwitch(context);
     }
@@ -56,8 +65,8 @@ public class Startup extends BroadcastReceiver {
             value = AppSelectListPreference.MUSIC_PLAY_ENTRY;
             Settings.System.putString(context.getContentResolver(), mapping, value);
         }
-        boolean enabled = !value.equals(AppSelectListPreference.DISABLED_ENTRY);
-        restore(GestureSettings.KEY_C_APP, enabled);
+//        boolean enabled = !value.equals(AppSelectListPreference.DISABLED_ENTRY);
+//        restore(GestureSettings.KEY_C_APP, enabled);
 
         // E Gesture
         mapping = GestureSettings.DEVICE_GESTURE_MAPPING_1;
@@ -66,8 +75,8 @@ public class Startup extends BroadcastReceiver {
             value = AppSelectListPreference.CAMERA_ENTRY;
             Settings.System.putString(context.getContentResolver(), mapping, value);
         }
-        enabled = !value.equals(AppSelectListPreference.DISABLED_ENTRY);
-        restore(GestureSettings.KEY_E_APP, enabled);
+//        enabled = !value.equals(AppSelectListPreference.DISABLED_ENTRY);
+//        restore(GestureSettings.KEY_E_APP, enabled);
 
         // V Geture
         mapping = GestureSettings.DEVICE_GESTURE_MAPPING_2;
@@ -76,8 +85,8 @@ public class Startup extends BroadcastReceiver {
             value = AppSelectListPreference.TORCH_ENTRY;
             Settings.System.putString(context.getContentResolver(), mapping, value);
         }
-        enabled = !value.equals(AppSelectListPreference.DISABLED_ENTRY);
-        restore(GestureSettings.KEY_V_APP, enabled);
+//        enabled = !value.equals(AppSelectListPreference.DISABLED_ENTRY);
+//        restore(GestureSettings.KEY_V_APP, enabled);
 
         // S Gesture
         mapping = GestureSettings.DEVICE_GESTURE_MAPPING_3;
@@ -86,8 +95,8 @@ public class Startup extends BroadcastReceiver {
             Settings.System.putString(context.getContentResolver(), mapping, value);
         }
         value = Settings.System.getString(context.getContentResolver(), GestureSettings.DEVICE_GESTURE_MAPPING_3);
-        enabled = !TextUtils.isEmpty(value) && !value.equals(AppSelectListPreference.DISABLED_ENTRY);
-        restore(GestureSettings.KEY_S_APP, enabled);
+//        enabled = !TextUtils.isEmpty(value) && !value.equals(AppSelectListPreference.DISABLED_ENTRY);
+//        restore(GestureSettings.KEY_S_APP, enabled);
 
         // W Gesture
         mapping = GestureSettings.DEVICE_GESTURE_MAPPING_4;
@@ -96,8 +105,8 @@ public class Startup extends BroadcastReceiver {
             value = AppSelectListPreference.MUSIC_PREV_ENTRY;
             Settings.System.putString(context.getContentResolver(), mapping, value);
         }
-        enabled = !value.equals(AppSelectListPreference.DISABLED_ENTRY);
-        restore(GestureSettings.KEY_W_APP, enabled);
+//        enabled = !value.equals(AppSelectListPreference.DISABLED_ENTRY);
+//        restore(GestureSettings.KEY_W_APP, enabled);
 
         // Z Gesture
         mapping = GestureSettings.DEVICE_GESTURE_MAPPING_5;
@@ -106,8 +115,8 @@ public class Startup extends BroadcastReceiver {
             value = AppSelectListPreference.MUSIC_NEXT_ENTRY;
             Settings.System.putString(context.getContentResolver(), mapping, value);
         }
-        enabled = !value.equals(AppSelectListPreference.DISABLED_ENTRY);
-        restore(GestureSettings.KEY_Z_APP, enabled);
+//        enabled = !value.equals(AppSelectListPreference.DISABLED_ENTRY);
+//        restore(GestureSettings.KEY_Z_APP, enabled);
 
         // left swipe
 //        value = Settings.System.getString(context.getContentResolver(), GestureSettings.DEVICE_GESTURE_MAPPING_8);
@@ -123,5 +132,8 @@ public class Startup extends BroadcastReceiver {
 //        value = Settings.System.getString(context.getContentResolver(), GestureSettings.DEVICE_GESTURE_MAPPING_10);
 //        enabled = !TextUtils.isEmpty(value) && !value.equals(AppSelectListPreference.DISABLED_ENTRY);
 //        restore(GestureSettings.FP_GESTURE_LONG_PRESS_APP, enabled);
+
+         value = Settings.System.getString(context.getContentResolver(), Settings.System.OMNI_BUTTON_EXTRA_KEY_MAPPING);
+         restore(GestureSettings.GESTURE_BUF_PATH, value);
     }
 }
