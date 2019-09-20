@@ -16,3 +16,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/omni_Z01R.mk
+
+COMMON_LUNCH_CHOICES := \
+    omni_Z01R-user \
+    omni_Z01R-userdebug \
+    omni_Z01R-eng
