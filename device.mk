@@ -160,13 +160,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
   textclassifier.bundle1
 
-# Telephony
-PRODUCT_PACKAGES += \
-  telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
 # Trust HAL
 #PRODUCT_PACKAGES += \
   lineage.trust@1.0-service
