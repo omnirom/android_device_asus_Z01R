@@ -124,7 +124,6 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2986344448
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 52554575872
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_COPY_OUT_VENDOR := vendor
-TARGET_COPY_OUT_PRODUCT := product
 
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true
@@ -141,8 +140,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/ADF:/ADF \
     /vendor/APD:/APD \
     /vendor/asdf:/asdf \
-    /vendor/factory:factory \
-    /vendor/xrom:xrom
+    /vendor/factory:factory
 
 # RIL
 TARGET_RIL_VARIANT := caf
